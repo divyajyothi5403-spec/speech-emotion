@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Emotion Recognition - RNN/LSTM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎤</span>
+                <span class="logo-text">SER-AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="glow-text">Speech Emotion Recognition</span>
+                <br>
+                <span class="subtitle">Powered by RNN/LSTM Deep Learning</span>
+            </h1>
+            <p class="hero-description">
+                Advanced artificial intelligence that analyzes human speech patterns 
+                to detect emotions in real-time using cutting-edge neural networks.
+            </p>
+            <div class="hero-buttons">
+                <a href="#demo" class="btn btn-primary">Try Live Demo</a>
+                <a href="#process" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-microphone">
+                <div class="mic-icon">🎙️</div>
+                <div class="sound-waves">
+                    <div class="wave wave-1"></div>
+                    <div class="wave wave-2"></div>
+                    <div class="wave wave-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three-step process from audio to emotion detection</p>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Microphone Input & Feature Extraction</h3>
+                        <p>Audio signals are captured and processed to extract acoustic features including MFCCs, Chroma, and Mel spectrograms.</p>
+                        <div class="feature-icons">
+                            <div class="feature-icon">
+                                <span>📊</span>
+                                <p>MFCC</p>
+                            </div>
+                            <div class="feature-icon">
+                                <span>🎵</span>
+                                <p>Chroma</p>
+                            </div>
+                            <div class="feature-icon">
+                                <span>📈</span>
+                                <p>Mel Spectrogram</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <div class="audio-visualizer">
+                            <div class="audio-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 40%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 50%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 30%"></div>
+                                <div class="bar" style="height: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>RNN/LSTM Model</h3>
+                        <p>Extracted features are processed through Recurrent Neural Networks with Long Short-Term Memory cells to capture temporal dependencies.</p>
+                        <div class="lstm-info">
+                            <div class="lstm-feature">
+                                <span>⚡</span>
+                                <p>Input Gate</p>
+                            </div>
+                            <div class="lstm-feature">
+                                <span>🔄</span>
+                                <p>Forget Gate</p>
+                            </div>
+                            <div class="lstm-feature">
+                                <span>📤</span>
+                                <p>Output Gate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <div class="lstm-diagram">
+                            <div class="lstm-cell">
+                                <div class="lstm-input">Input</div>
+                                <div class="lstm-gates">
+                                    <div class="gate input-gate">Input Gate</div>
+                                    <div class="gate forget-gate">Forget Gate</div>
+                                    <div class="gate output-gate">Output Gate</div>
+                                </div>
+                                <div class="lstm-output">Output</div>
+                            </div>
+                            <div class="lstm-flow">
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Emotion Prediction</h3>
+                        <p>The model classifies emotions based on learned patterns, providing probability scores for each emotion category.</p>
+                        <div class="emotion-results">
+                            <div class="emotion-item">
+                                <span class="emotion-icon">😊</span>
+                                <span class="emotion-label">Happy</span>
+                            </div>
+                            <div class="emotion-item">
+                                <span class="emotion-icon">😢</span>
+                                <span class="emotion-label">Sad</span>
+                            </div>
+                            <div class="emotion-item">
+                                <span class="emotion-icon">😠</span>
+                                <span class="emotion-label">Angry</span>
+                            </div>
+                            <div class="emotion-item">
+                                <span class="emotion-icon">😐</span>
+                                <span class="emotion-label">Neutral</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-visual">
+                        <div class="emotion-chart">
+                            <div class="chart-bar" data-emotion="happy" data-value="85">
+                                <div class="bar-fill" style="width: 85%"></div>
+                                <span class="bar-label">Happy 85%</span>
+                            </div>
+                            <div class="chart-bar" data-emotion="sad" data-value="10">
+                                <div class="bar-fill" style="width: 10%"></div>
+                                <span class="bar-label">Sad 10%</span>
+                            </div>
+                            <div class="chart-bar" data-emotion="angry" data-value="3">
+                                <div class="bar-fill" style="width: 3%"></div>
+                                <span class="bar-label">Angry 3%</span>
+                            </div>
+                            <div class="chart-bar" data-emotion="neutral" data-value="2">
+                                <div class="bar-fill" style="width: 2%"></div>
+                                <span class="bar-label">Neutral 2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2 class="section-title">Live Input Demo</h2>
+            <p class="section-subtitle">Real-time emotion detection from your microphone or uploaded files</p>
+            
+            <!-- Input Method Tabs -->
+            <div class="input-tabs">
+                <button class="tab-btn active" data-tab="recording">
+                    <span class="tab-icon">🎙️</span>
+                    Live Recording
+                </button>
+                <button class="tab-btn" data-tab="upload">
+                    <span class="tab-icon">📁</span>
+                    File Upload
+                </button>
+            </div>
+            
+            <div class="demo-container">
+                <!-- Recording Tab Content -->
+                <div id="recordingTab" class="tab-content active">
+                    <div class="demo-controls">
+                        <button id="startRecording" class="btn btn-record">
+                            <span class="btn-icon">🎙️</span>
+                            Start Recording
+                        </button>
+                        <button id="stopRecording" class="btn btn-stop" disabled>
+                            <span class="btn-icon">⏹️</span>
+                            Stop Recording
+                        </button>
+                        <div class="recording-status">
+                            <div id="statusIndicator" class="status-indicator"></div>
+                            <span id="statusText">Ready to record</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upload Tab Content -->
+                <div id="uploadTab" class="tab-content">
+                    <div class="upload-container">
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">📁</div>
+                            <h3>Upload Audio File</h3>
+                            <p>Drag and drop your audio file here or click to browse</p>
+                            <p class="upload-formats">Supported formats: WAV, MP3, FLAC, OGG, M4A</p>
+                            <input type="file" id="audioFileInput" accept=".wav,.mp3,.flac,.ogg,.m4a,audio/*" hidden>
+                            <button id="browseBtn" class="btn btn-secondary">Browse Files</button>
+                        </div>
+                        
+                        <div id="filePreview" class="file-preview hidden">
+                            <div class="file-info">
+                                <span class="file-icon">🎵</span>
+                                <div class="file-details">
+                                    <p id="fileName" class="file-name">audio.wav</p>
+                                    <p id="fileSize" class="file-size">2.5 MB</p>
+                                </div>
+                                <button id="removeFile" class="btn-remove">✕</button>
+                            </div>
+                            <audio id="audioPreview" controls class="audio-preview-player"></audio>
+                            <button id="analyzeFile" class="btn btn-primary btn-analyze">
+                                <span class="btn-icon">🔍</span>
+                                Analyze Emotion
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Upload Status -->
+                    <div class="upload-status">
+                        <div id="uploadStatusIndicator" class="status-indicator"></div>
+                        <span id="uploadStatusText">Ready to upload</span>
+                    </div>
+                </div>
+                
+                <!-- Shared Visualizations -->
+                <div class="demo-visualizations">
+                    <div class="audio-visualizer-container">
+                        <h3>Audio Visualization</h3>
+                        <canvas id="audioCanvas" class="audio-canvas"></canvas>
+                    </div>
+                    
+                    <div class="emotion-prediction-container">
+                        <h3>Emotion Prediction</h3>
+                        <div class="emotion-display" aria-live="polite">
+                            <div id="emotionIcon" class="emotion-icon-large">🎤</div>
+                            <div id="emotionLabel" class="emotion-label-large">Waiting for input...</div>
+                            <div id="emotionConfidence" class="emotion-confidence">--</div>
+                        </div>
+                        <div class="emotion-probabilities">
+                            <div class="prob-bar emotion-happy" data-emotion="happy">
+                                <span class="prob-label">😊 Happy</span>
+                                <div class="prob-bar-bg">
+                                    <div id="happyProb" class="prob-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="happyProbText" class="prob-value">0%</span>
+                            </div>
+                            <div class="prob-bar emotion-sad" data-emotion="sad">
+                                <span class="prob-label">😢 Sad</span>
+                                <div class="prob-bar-bg">
+                                    <div id="sadProb" class="prob-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="sadProbText" class="prob-value">0%</span>
+                            </div>
+                            <div class="prob-bar emotion-angry" data-emotion="angry">
+                                <span class="prob-label">😠 Angry</span>
+                                <div class="prob-bar-bg">
+                                    <div id="angryProb" class="prob-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="angryProbText" class="prob-value">0%</span>
+                            </div>
+                            <div class="prob-bar emotion-neutral" data-emotion="neutral">
+                                <span class="prob-label">😐 Neutral</span>
+                                <div class="prob-bar-bg">
+                                    <div id="neutralProb" class="prob-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="neutralProbText" class="prob-value">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About the Technology</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Deep Learning</h3>
+                    <p>Utilizing advanced neural network architectures to understand complex patterns in human speech.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Real-Time Processing</h3>
+                    <p>Instant emotion detection with minimal latency, suitable for live applications.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>High Accuracy</h3>
+                    <p>Achieving impressive accuracy rates through extensive training on diverse datasets.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Research Based</h3>
+                    <p>Built on cutting-edge research in speech processing and affective computing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SER-AI</h4>
+                    <p>Advanced Speech Emotion Recognition powered by Deep Learning</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#demo">Live Demo</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technology</h4>
+                    <ul>
+                        <li>RNN/LSTM Networks</li>
+                        <li>MFCC Features</li>
+                        <li>Real-time Processing</li>
+                        <li>Deep Learning</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SER-AI. All rights reserved. | Real-Time Application Demonstration</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

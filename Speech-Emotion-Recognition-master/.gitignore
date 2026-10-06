@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+models/*.h5
+models/*.pkl
+models/*.npy
+models/*.json
+temp_recording.wav
+*.wav
+*.mp3
+waveform.png
+spectrogram.png
+mfcc.png
+
+# Data
+data/*/
+!data/.gitkeep
+
+# Website
+website/__pycache__/
+website/*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Training outputs
+models/training_history.png

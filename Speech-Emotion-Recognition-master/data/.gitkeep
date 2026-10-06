@@ -1,0 +1,8 @@
+# This directory should contain emotion-labeled audio files
+# Organize as:
+# data/
+# ├── happy/
+# ├── sad/
+# ├── angry/
+# ├── neutral/
+# └── ... (other emotions)
